@@ -20,20 +20,21 @@ class StopwatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
+        clockLabel.font = UIFont(name: "Menlo", size: 55)
     }
     
     func styleButton(_ button: UIButton) {
         button.backgroundColor = UIColor.systemBackground
         button.setTitleColor(UIColor.systemBlue, for: .normal)
         button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1
+        button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
     // Functions when tapped
     @IBAction func startButtonTapped(_ sender: UIButton) {
         startTimer()
-        updateButtonState(startEnabled: false, stopEnabled: true, resetEnabled: false)
+        updateButtonState(startEnabled: false, stopEnabled: true, resetEnabled: true)
     }
     
     @IBAction func stopButtonTapped(_ sender: UIButton) {
@@ -81,13 +82,10 @@ class StopwatchViewController: UIViewController {
         seconds = 0
         clockLabel.text = "00:00:00"
     }
-    
 
     func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
-    
-    
 }
 

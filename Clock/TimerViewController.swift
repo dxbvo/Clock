@@ -28,7 +28,7 @@ class TimerViewController: UIViewController {
 
         // Set the timePicker to show countdown mode
         timePicker.countDownDuration = 300 // Initial duration of 5 minutes
-        
+        timerLabel.font = UIFont(name: "Menlo", size: 55)
         styleButtons(startButton)
     }
     
@@ -36,7 +36,7 @@ class TimerViewController: UIViewController {
         button.backgroundColor = UIColor.systemBackground
         button.setTitleColor(UIColor.systemBlue, for: .normal)
         button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1
+        button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.systemBlue.cgColor
     }
 
