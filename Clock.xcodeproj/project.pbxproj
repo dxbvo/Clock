@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8B4BC552B7178A7006ABC81 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4BC542B7178A7006ABC81 /* TimerViewController.swift */; };
 		D8C41EE62B712B45000DEB42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C41EE52B712B45000DEB42 /* AppDelegate.swift */; };
 		D8C41EE82B712B45000DEB42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C41EE72B712B45000DEB42 /* SceneDelegate.swift */; };
-		D8C41EEA2B712B45000DEB42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C41EE92B712B45000DEB42 /* ViewController.swift */; };
+		D8C41EEA2B712B45000DEB42 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C41EE92B712B45000DEB42 /* StopwatchViewController.swift */; };
 		D8C41EED2B712B45000DEB42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C41EEB2B712B45000DEB42 /* Main.storyboard */; };
 		D8C41EEF2B712B47000DEB42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C41EEE2B712B47000DEB42 /* Assets.xcassets */; };
 		D8C41EF22B712B47000DEB42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C41EF02B712B47000DEB42 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8B4BC542B7178A7006ABC81 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D8C41EE22B712B45000DEB42 /* Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C41EE52B712B45000DEB42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C41EE72B712B45000DEB42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8C41EE92B712B45000DEB42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8C41EE92B712B45000DEB42 /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 		D8C41EEC2B712B45000DEB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8C41EEE2B712B47000DEB42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C41EF12B712B47000DEB42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +60,8 @@
 			children = (
 				D8C41EE52B712B45000DEB42 /* AppDelegate.swift */,
 				D8C41EE72B712B45000DEB42 /* SceneDelegate.swift */,
-				D8C41EE92B712B45000DEB42 /* ViewController.swift */,
+				D8C41EE92B712B45000DEB42 /* StopwatchViewController.swift */,
+				D8B4BC542B7178A7006ABC81 /* TimerViewController.swift */,
 				D8C41EEB2B712B45000DEB42 /* Main.storyboard */,
 				D8C41EEE2B712B47000DEB42 /* Assets.xcassets */,
 				D8C41EF02B712B47000DEB42 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C41EEA2B712B45000DEB42 /* ViewController.swift in Sources */,
+				D8B4BC552B7178A7006ABC81 /* TimerViewController.swift in Sources */,
+				D8C41EEA2B712B45000DEB42 /* StopwatchViewController.swift in Sources */,
 				D8C41EE62B712B45000DEB42 /* AppDelegate.swift in Sources */,
 				D8C41EE82B712B45000DEB42 /* SceneDelegate.swift in Sources */,
 			);

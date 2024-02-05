@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZWb-yh-GOw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stopwatch-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StopwatchViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVO-cc-eeX">
-                                <rect key="frame" x="51" y="192" width="290" height="127"/>
+                                <rect key="frame" x="51" y="192" width="290" height="78"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="66"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B07-mC-IKd">
-                                <rect key="frame" x="75" y="409" width="63" height="35"/>
+                                <rect key="frame" x="75" y="360" width="63" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="reset"/>
                                 <connections>
@@ -31,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP9-69-vnr">
-                                <rect key="frame" x="258" y="409" width="60" height="35"/>
+                                <rect key="frame" x="258" y="360" width="60" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="start"/>
                                 <connections>
@@ -39,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrJ-O9-Pak">
-                                <rect key="frame" x="170" y="409" width="58" height="35"/>
+                                <rect key="frame" x="170" y="360" width="58" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="stop"/>
                                 <connections>
@@ -63,6 +64,7 @@
                             <constraint firstItem="B07-mC-IKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="zfc-nx-KdY"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="stopwatch" catalog="system" selectedImage="stopwatch" id="LOd-n2-fbP"/>
                     <connections>
                         <outlet property="clockLabel" destination="nVO-cc-eeX" id="L6I-mu-i0o"/>
                         <outlet property="resetButton" destination="B07-mC-IKd" id="ZJn-f6-2LP"/>
@@ -72,10 +74,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1051" y="-518"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="rMV-z5-sdc">
+            <objects>
+                <viewController id="EU7-t9-OqS" customClass="TimerViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XKO-RJ-FcW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axG-XR-s1R">
+                                <rect key="frame" x="53" y="160" width="287" height="180"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-kC-C4V">
+                                <rect key="frame" x="50" y="211" width="293" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWP-oq-YCX">
+                                <rect key="frame" x="128" y="396" width="136" height="61"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="EU7-t9-OqS" eventType="touchUpInside" id="AW9-8k-wP2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LDt-vU-ifL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LDt-vU-ifL" firstAttribute="bottom" secondItem="axG-XR-s1R" secondAttribute="bottom" constant="429" id="5rv-ws-1zA"/>
+                            <constraint firstItem="axG-XR-s1R" firstAttribute="top" secondItem="LDt-vU-ifL" secondAttribute="top" constant="101" id="CtZ-WU-h81"/>
+                            <constraint firstItem="LDt-vU-ifL" firstAttribute="trailing" secondItem="axG-XR-s1R" secondAttribute="trailing" constant="53" id="FyN-6a-2Yd"/>
+                            <constraint firstItem="LDt-vU-ifL" firstAttribute="trailing" secondItem="HUf-kC-C4V" secondAttribute="trailing" constant="50" id="UNx-J2-Foy"/>
+                            <constraint firstItem="LDt-vU-ifL" firstAttribute="trailing" secondItem="BWP-oq-YCX" secondAttribute="trailing" constant="129" id="UoP-Pc-1ml"/>
+                            <constraint firstItem="axG-XR-s1R" firstAttribute="leading" secondItem="LDt-vU-ifL" secondAttribute="leading" constant="53" id="Zn9-rg-dOm"/>
+                            <constraint firstItem="HUf-kC-C4V" firstAttribute="top" secondItem="LDt-vU-ifL" secondAttribute="top" constant="152" id="byJ-PS-Vye"/>
+                            <constraint firstItem="LDt-vU-ifL" firstAttribute="bottom" secondItem="BWP-oq-YCX" secondAttribute="bottom" constant="312" id="dNs-WF-dXG"/>
+                            <constraint firstItem="HUf-kC-C4V" firstAttribute="leading" secondItem="LDt-vU-ifL" secondAttribute="leading" constant="50" id="geg-JC-v8v"/>
+                            <constraint firstItem="BWP-oq-YCX" firstAttribute="leading" secondItem="LDt-vU-ifL" secondAttribute="leading" constant="128" id="jQY-0C-HvM"/>
+                            <constraint firstItem="BWP-oq-YCX" firstAttribute="top" secondItem="axG-XR-s1R" secondAttribute="bottom" constant="56" id="yvB-a4-wYk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="VzP-ze-UjK">
+                        <imageReference key="selectedImage" image="timer" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="startButton" destination="BWP-oq-YCX" id="l1g-Gu-mFV"/>
+                        <outlet property="timePicker" destination="axG-XR-s1R" id="g0i-iJ-j6U"/>
+                        <outlet property="timerLabel" destination="HUf-kC-C4V" id="rWg-6e-pJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmY-gt-Qcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.6183206106871" y="134.50704225352112"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sQi-3Y-wMn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZWb-yh-GOw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="7Uc-CP-cr1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wCD-k3-9GR"/>
+                        <segue destination="EU7-t9-OqS" kind="relationship" relationship="viewControllers" id="0VL-6E-0GP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uk-FJ-jVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="96.946564885496173" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

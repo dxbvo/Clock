@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StopwatchViewController: UIViewController {
         
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var clockLabel: UILabel!
@@ -20,6 +20,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
+    }
+    
+    func styleButton(_ button: UIButton) {
+        button.backgroundColor = UIColor.systemBackground
+        button.setTitleColor(UIColor.systemBlue, for: .normal)
+        button.layer.cornerRadius = 8
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.systemBlue.cgColor
     }
     
     // Functions when tapped
@@ -39,6 +47,10 @@ class ViewController: UIViewController {
     }
     
     func configureButtons() {
+        // button design
+        styleButton(startButton)
+        styleButton(stopButton)
+        styleButton(resetButton)
         // Set up initial state of buttons
         startButton.isEnabled = true
         stopButton.isEnabled = false
@@ -75,10 +87,6 @@ class ViewController: UIViewController {
         timer?.invalidate()
         timer = nil
     }
-    
-    
-    
-    
     
     
 }
