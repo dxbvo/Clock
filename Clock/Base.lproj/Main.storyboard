@@ -120,7 +120,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="VzP-ze-UjK">
-                        <imageReference key="selectedImage" image="timer" catalog="system" symbolScale="default"/>
+                        <imageReference key="selectedImage" image="timer" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="startButton" destination="BWP-oq-YCX" id="l1g-Gu-mFV"/>
